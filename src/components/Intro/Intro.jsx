@@ -1,12 +1,8 @@
 import React from 'react'
 import { Box } from '@mui/system';
-import { styled, alpha } from '@mui/material/styles';
-import { Avatar, Container, Grid, Typography } from '@mui/material';
+import { styled} from '@mui/material/styles';
+import { Container, Grid, Typography } from '@mui/material';
 import Profile from '../image/Profile2.jpg'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
-
 
 const IntroWrapper = styled(Container)(({ theme }) => ({
   height: '35rem',
@@ -92,7 +88,7 @@ const Image = styled(Box)(({ theme }) => ({
 
 const Intro = () => {
   return (
-    <IntroWrapper >  
+    <IntroWrapper id='Intro' >  
     <Grid container spacing={2}>
     <Grid item xs={12} md={6} >
     <TextWrapper>

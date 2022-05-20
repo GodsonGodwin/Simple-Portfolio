@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box } from '@mui/system';
-import { styled, alpha } from '@mui/material/styles';
+import { styled} from '@mui/material/styles';
 import { Avatar, Container, Typography } from '@mui/material';
 import Profile from '../image/Profile2.jpg'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const HeroWrapper = styled(Box)(({ theme }) => ({
     height: '20rem',
@@ -63,7 +63,6 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
       gap: '15px',
       paddingTop: theme.spacing(2.5),
       color:'#e2ebf3',
-      cursor: 'pointer',
     
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing(2),
@@ -72,6 +71,12 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
   }));
 
   const GitHub = styled(GitHubIcon)(({theme}) =>({
+    cursor: 'pointer',
+
+    '&:hover':{
+      transform:'scale(1.2)',
+    },
+
     [theme.breakpoints.down('sm')]: {
       fontSize:'30px',
       },
@@ -79,13 +84,25 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
   }))
 
   
-  const Email = styled(EmailIcon)(({theme}) =>({
+  const Twitter = styled(TwitterIcon)(({theme}) =>({
+    cursor: 'pointer',
+
+    '&:hover':{
+      transform:'scale(1.2)',
+    },
+
     [theme.breakpoints.down('sm')]: {
       fontSize:'30px',
       },
   }))
 
   const WhatsApp = styled(WhatsAppIcon)(({theme}) =>({
+    cursor: 'pointer',
+
+    '&:hover':{
+      transform:'scale(1.2)',
+    },
+
     [theme.breakpoints.down('sm')]: {
       fontSize:'30px',
       },
@@ -105,6 +122,11 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
 
   }))
   
+  const Links = styled('a')(({theme}) =>({
+   color:'aliceblue'
+
+  }))
+  
 
 const Hero = () => {
   return (
@@ -119,10 +141,12 @@ const Hero = () => {
         
 
             <IconWrapper>
-                <GitHub fontSize ='large' />
-                <Email fontSize ='large'/>
-                <WhatsApp fontSize='large'/>
+               <Links href='https://github.com/iamabeljoshua' target='_blank'> <GitHub fontSize ='large' /></Links>
+               <Links href='https://twitter.com/iamabeljoshua' target='_blank'><Twitter fontSize ='large'/></Links> 
+               <Links href='https://api.whatsapp.com/send?phone=+234 8157853814' target='_blank'><WhatsApp fontSize='large'/></Links>
             </IconWrapper>
+
+            
         </ContentWrapper>
         <LocationName variant='h6'> Abuja, Nigeria</LocationName>
 
