@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
-import { Box } from '@mui/system';
-import { styled, alpha } from '@mui/material/styles';
-import { Avatar, Button, Container, Grid, Typography } from '@mui/material';
-import Profile from '../image/Profile2.jpg'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
+import { styled} from '@mui/material/styles';
+import { Container, Typography } from '@mui/material';
 
 
 const AboutWrapper = styled(Container)(({ theme, showMoreText }) => ({
@@ -14,7 +9,6 @@ const AboutWrapper = styled(Container)(({ theme, showMoreText }) => ({
   padding: '2rem',
   textAlign:'center',
   marginBottom:'5rem',
-  // background: 'linear-gradient(to right top, #1625BB, #FFD700)',
 
 
   [theme.breakpoints.down('md')]: {
@@ -81,7 +75,7 @@ const ABout = () => {
 
   const [showMoreText, setShowMoreText] = useState(false);
   return (  
-    <AboutWrapper >   
+    <AboutWrapper id="About" >   
     <AboutTitle>About Me </AboutTitle>
     {!showMoreText ? (<AboutText>
     Hello! My name is Abel Fergurson and I enjoy creating things that live on the internet. 

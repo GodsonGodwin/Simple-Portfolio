@@ -1,15 +1,12 @@
 import React, {useState, useRef} from 'react'
-import { Box, flexbox } from '@mui/system';
-import { styled, alpha } from '@mui/material/styles';
-import { Avatar, Button, Container, Grid, Typography } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
+import { Box} from '@mui/system';
+import { styled } from '@mui/material/styles';
+import { Button, Container, Typography } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
 const ContactWrapper = styled(Container)(({ theme }) => ({
     height: '30rem',
-    marginTop: '10rem',
+    marginTop: '15rem',
     marginBottom: '7rem',
     padding: '4rem 2rem',
     textAlign:'center',
@@ -21,7 +18,8 @@ const ContactWrapper = styled(Container)(({ theme }) => ({
   
     [theme.breakpoints.down('sm')]: {
       height: '30rem',
-      marginTop: '2rem',    
+      marginTop: '7rem', 
+      marginBottom: '3rem',
       padding: '4rem 0rem',
       gap:'0.8rem',
     },
