@@ -2,43 +2,42 @@ import React from 'react'
 import { Box } from '@mui/system';
 import { styled} from '@mui/material/styles';
 import { Avatar, Container, Typography } from '@mui/material';
-import Profile from '../image/Profile2.jpg'
-import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const HeroWrapper = styled(Box)(({ theme }) => ({
-    height: '20rem',
     width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign:'center',
-    justifyContent: 'center',
-    background: 'linear-gradient(to right top, #0b18a7, #dab901)',
+    background: "url('/image/ui.png')",
+    backgroundSize:'cover',
+
 
     [theme.breakpoints.down('sm')]: {
-      height: '18rem',
-      width: 'auto',
+      width: 'aut0',
     },
   }));
   
 
-  const ContentWrapper = styled(Container)(({theme}) =>({
+  const ContentWrapper = styled(Box)(({theme}) =>({
       alignItems: 'center',
+      textAlign:'center',
       display: 'flex',
-      flexDirection: 'column',
-      marginTop: '1rem',     
+      padding:'1rem 0',
+      flexDirection: 'column',  
+      background: 'rgba(0, 0, 0, 0.6)',
+      width: '100%',
   }));
 
   const TextName = styled(Typography)(({theme}) =>({
     fontWeight: '400', 
+    fontSize:'3rem',
     color:'#e2ebf3', 
-    letterSpacing:'20px', 
-    paddingTop:'5px',
+    letterSpacing:'15px', 
+    paddingTop:'10px',
 
     [theme.breakpoints.down('sm')]: {
     fontWeight: '700', 
-    fontSize: '35px',
+    fontSize: '25px',
     letterSpacing:'10px', 
     },
 
@@ -47,6 +46,7 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
   const JobName = styled(Typography)(({theme}) =>({
     fontWeight: '100', 
     color:'#e2ebf3', 
+    paddingTop:'10px',
     letterSpacing:'10px',
 
     [theme.breakpoints.down('sm')]: {
@@ -70,7 +70,7 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
 
   }));
 
-  const GitHub = styled(GitHubIcon)(({theme}) =>({
+  const Linked = styled(LinkedInIcon)(({theme}) =>({
     cursor: 'pointer',
 
     '&:hover':{
@@ -131,24 +131,25 @@ const HeroWrapper = styled(Box)(({ theme }) => ({
 const Hero = () => {
   return (
     <HeroWrapper>
-        <ContentWrapper maxWidth="sm">
+        <ContentWrapper>
             <Box>
-               <Avatar  sx={{ width: '6rem', height: '6rem' }} alt="Remy Sharp" src={Profile} />
+               <Avatar  sx={{ width: '7rem', height: '7rem' }} alt="Remy Sharp" src='/image/profile.png' />
          </Box>
 
-        <TextName variant='h2' > Abel Joshua</TextName>
-        <JobName variant='h5'> Software Engineer</JobName>
+        <TextName variant='h2' > Michael Joshua</TextName>
+        <JobName variant='h5'> UI/UX Designer</JobName>
         
 
             <IconWrapper>
-               <Links href='https://github.com/iamabeljoshua' target='_blank'> <GitHub fontSize ='large' /></Links>
-               <Links href='https://twitter.com/iamabeljoshua' target='_blank'><Twitter fontSize ='large'/></Links> 
-               <Links href='https://api.whatsapp.com/send?phone=+234 8157853814' target='_blank'><WhatsApp fontSize='large'/></Links>
+               
+               <Links href='https://twitter.com/michael28992177' target='_blank'><Twitter fontSize ='large'/></Links> 
+               <Links href='https://api.whatsapp.com/send?phone=2347065514055' target='_blank'><WhatsApp fontSize='large'/></Links>
+               <Links href='https://www.linkedin.com/in/michael-63128a238/' target='_blank'> <Linked fontSize ='large' /></Links>
             </IconWrapper>
 
-            
+            <LocationName variant='h6'> Abuja, Nigeria</LocationName>     
         </ContentWrapper>
-        <LocationName variant='h6'> Abuja, Nigeria</LocationName>
+       
 
     </HeroWrapper>
   )

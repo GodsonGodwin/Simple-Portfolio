@@ -33,8 +33,7 @@ const MenuLink = styled(Typography)(({theme})=>({
 
 const ToolbarWrap = styled(Toolbar)(({theme})=>({
   display: 'flex', 
-  background: 'linear-gradient(to left bottom, #1625BB, #FFD700)',
-  
+  background: 'var(--blue)',
   top:'0',
   width:'100%',
 

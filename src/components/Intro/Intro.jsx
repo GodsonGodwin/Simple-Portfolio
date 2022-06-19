@@ -2,17 +2,16 @@ import React from 'react'
 import { Box } from '@mui/system';
 import { styled} from '@mui/material/styles';
 import { Container, Grid, Typography } from '@mui/material';
-import Profile from '../image/Profile2.jpg'
+import Profile from '../image/profile.jpg'
 
 const IntroWrapper = styled(Container)(({ theme }) => ({
-  height: '35rem',
   marginTop: '5rem',
-  padding: '4rem 2rem',
+  padding: '4rem 0 7rem 0rem',
   textAlign:'center',
-//   background: 'linear-gradient(to right top, #1625BB, #FFD700)',
+
 
   [theme.breakpoints.down('sm')]: {
-    height: '45rem',
+    
     marginTop: '2rem',    
   },
 }));
@@ -21,40 +20,39 @@ const IntroWrapper = styled(Container)(({ theme }) => ({
 const TextWrapper = styled(Typography)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
-    borderRight: '3px solid #998304 ',
+    borderRight: '3px solid var(--darkGold) ',
    
      [theme.breakpoints.down('sm')]: {
         borderRight: 'none',
-        borderBottom: '1px solid #998304 ',
+        
+        borderBottom: '1px solid var(--darkGold) ',
      },
    }));
 
 const Text1 = styled(Typography)(({ theme }) => ({
  fontSize: '1.2rem',
  fontWeight: 'bold',
- color:'#09116e',
+ color:'var(--blue)',
   textAlign:'center',
 
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '1rem',
-  },
+
 }));
 
 const Text2 = styled(Typography)(({ theme }) => ({
     fontSize: '4rem',
     fontWeight: 'bold',
-    color:'#998304',
+    color:'var(--darkGold)',
      textAlign:'center',
    
      [theme.breakpoints.down('sm')]: {
-       fontSize: '3rem',
+       fontSize: '2.5rem',
      },
    }));
 
    const Text3 = styled(Typography)(({ theme }) => ({
     fontSize: '2.5rem',
     fontWeight: 'bold',
-    color:'#09116e',
+    color:'var(--blue)',
      textAlign:'center',
    
      [theme.breakpoints.down('sm')]: {
@@ -67,20 +65,22 @@ const AboutText = styled(Typography)(({ theme }) => ({
  fontWeight: '400',
  letterSpacing: '2px',
  lineHeight: '50px',
- color:'#998304',
+ color:'var(--darkGold)',
   textAlign:'center',
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1rem',
     letterSpacing: '1.5px',
+    paddingBottom: '1rem',
     lineHeight: '30px',
     
   },
 }));
 
 const Image = styled(Box)(({ theme }) => ({
+  marginRight:'4rem',
     [theme.breakpoints.down('sm', 'md')]: {
-        marginTop: '-5rem',
+        margin: '0',
 
     },
   }));
@@ -89,20 +89,20 @@ const Image = styled(Box)(({ theme }) => ({
 const Intro = () => {
   return (
     <IntroWrapper id='Intro' >  
-    <Grid container spacing={2}>
+    <Grid container >
     <Grid item xs={12} md={6} >
     <TextWrapper>
     <Text1>Hi, My Name is </Text1>
-    <Text2> Abel Joshua </Text2>
-    <Text3>I am a full stack Developer </Text3>
-    <AboutText>Highly skilled and technically smart </AboutText>
+    <Text2> Michael Joshua </Text2>
+    <Text3>I am a UI/UX Designer </Text3>
+    <AboutText>Highly skilled and technically creative </AboutText>
     </TextWrapper>
     
     </Grid>
 
     <Grid item xs={12} md={6}>
         <Image>
-        <img src={Profile} className='ProfileImage' alt='Profile'/>
+        <img src='/image/profile.png' className='ProfileImage' alt='Profile'/>
             </Image>
         </Grid>
 
