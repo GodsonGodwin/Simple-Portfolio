@@ -3,25 +3,24 @@ import { Box } from '@mui/system';
 import { styled } from '@mui/material/styles';
 import {Container, Typography } from '@mui/material';
 
-import Clique from '../image/clique.png';
-import Angel from '../image/angels.png';
-import VigoVote from '../image/vigovote.png';
+import Vote from '../image/vote.jpg';
+import Product from '../image/product.jpg';
+import Auto from '../image/auto.jpg';
 import FeastBank from '../image/feastbank1.png';
 import Vigotag from '../image/vigotag.png';
 import Cardium from '../image/cardium.png';
 import Card from './Card';
 
 const Wrapper = styled(Container)(({theme}) =>({
-    height:'65rem',
-    marginTop:'10rem',
-    paddingTop:'7rem',
+    marginTop:'5rem',
+    paddingTop:'3rem',
     display: 'flex',
     flexDirection:"column",
     alignItems: 'center',
     textAlign:'center',
 
     [theme.breakpoints.down('md')]: {
-        height: '117rem',
+        
         
       },
 
@@ -67,17 +66,17 @@ const Portfolio = () => {
 
             <ProjectList>
 
-            <Card image={Clique} text1='Cardium' text2='Design / Development'/>
+            <Card image={Vote} />
 
-            <Card image={Angel} text1='Angel Home Care' text2='Design / Development'/>
+            <Card image={Product} />
 
-            <Card image={VigoVote} text1='Vigo Vote' text2='Design / Development'/>
+            <Card image={Auto} />
 
-            <Card image={FeastBank} text1='FeastBank' text2='Design / Development / Technology'/>
+            <Card image={FeastBank} />
 
-            <Card image={Vigotag} text1='Vigotag' text2='Design / Development'/>
+            <Card image={Vigotag} />
 
-            <Card image={Cardium} text1='Cardium' text2='Design / Development'/>
+            <Card image={Cardium} />
 
         </ProjectList>
     </Wrapper>

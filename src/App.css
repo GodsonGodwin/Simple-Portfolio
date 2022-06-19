@@ -7,28 +7,23 @@
 
 :root
 {
-    --gold: #FFD700;
     --gradient : linear-gradient(to right top, #1625BB, #FFD700);
-    --darkGold : #998304;
-    --blue : #09116e;
+    --darkGold : rgb(44, 42, 42);
+    --blue : #4482FB;
     --boxShadow : -20px 20px 30px rgba(32, 126, 40, 0.137);
 }
 
-/* body{
-    background: #0a192f;
-} */
+
 
 
 .ProfileImage{
-    width: 300px;
+    width: 250px;
     height: 300px;
-    margin-top: 7rem;
+    margin-top: 4rem;
     border-radius: 30px;
-    border-right: 5px solid #998304;
-    border-left: 1px solid #998304;
+    border-left: 1px solid var(--blue);
+    border-right: 5px solid var(--blue);
 
 }
 
-em{
-    color: #998304;
-}
+

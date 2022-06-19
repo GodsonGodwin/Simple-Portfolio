@@ -8,12 +8,12 @@ const Project = styled(Box)(({theme, image}) =>({
     backgroundRepeat:'no-repeat',
     backgroundSize:'cover',
     height:'15rem',
-    width:"26rem",
+    width:"28rem",
     color: '#00000000',
 
         "&:hover":{
                 display:'flex',
-                backgroundColor: '#00000089',
+                backgroundColor: '#4482FB',
                 color: 'white', 
                 transform: 'scale(1.05)',   
                 transition:'0.8s ease-in',   
@@ -56,8 +56,8 @@ const Card = ({image, text1, text2}) => {
   return (
     <Project image={image}>  
     <Overlay>
-        <Text1>{text1}</Text1>
-        <Text2>{text2}</Text2>
+        {/* <Text1>{text1}</Text1>
+        <Text2>{text2}</Text2> */}
     </Overlay>
 </Project>
   )

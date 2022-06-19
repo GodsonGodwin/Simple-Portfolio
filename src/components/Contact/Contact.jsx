@@ -5,21 +5,18 @@ import { Button, Container, Typography } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
 const ContactWrapper = styled(Container)(({ theme }) => ({
-    height: '30rem',
     marginTop: '15rem',
-    marginBottom: '7rem',
+    marginBottom: '1rem',
     padding: '4rem 2rem',
     textAlign:'center',
     justifyContent:'center',
     display: 'flex',
     gap:'2rem',
     flexDirection: 'column',
-    background: 'linear-gradient(to right top, var(--blue), var(--gold))',
+    background: 'var(--blue)',
   
     [theme.breakpoints.down('sm')]: {
-      height: '30rem',
       marginTop: '7rem', 
-      marginBottom: '3rem',
       padding: '4rem 0rem',
       gap:'0.8rem',
     },
@@ -52,7 +49,7 @@ const ContactWrapper = styled(Container)(({ theme }) => ({
   const Typography2 = styled(Typography)(({theme}) =>({
     fontSize:'2rem',
     fontWeight:'400',
-    color:'#1625BB',
+    color:'black',
     
 
 
@@ -77,7 +74,8 @@ const ContactWrapper = styled(Container)(({ theme }) => ({
 
   const Button1 = styled(Button)(({theme}) =>({
     fontSize: '1rem',
-    background: 'linear-gradient(to right top, var(--darkGold), var(--gold))',
+    background: ' var(--blue)',
+    border:'1px solid aliceblue',
     fontWeight:'700',
     marginTop:'1rem',
     width: '8rem',

@@ -2,8 +2,8 @@ import React from 'react'
 import { Box } from '@mui/system';
 import { styled} from '@mui/material/styles';
 import { Avatar, Container, Typography } from '@mui/material';
-import Profile from '../image/Profile2.jpg'
-import GitHubIcon from '@mui/icons-material/GitHub';
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
@@ -82,8 +82,8 @@ const FooterWrapper = styled(Box)(({ theme }) => ({
  
   const Gradient = styled(Box)(({theme}) =>({
 
-    background: 'linear-gradient(to left bottom, var(--gold), var(--darkGold))',
-    border:'0px solid red',
+    background: 'linear-gradient(to left bottom, var(--blue), var(--darkGold))',
+    borderTop:'1px solid aliceblue',
     height: '3rem',
     textAlign: 'center',
     paddingTop:'3px',
@@ -108,7 +108,7 @@ const FooterWrapper = styled(Box)(({ theme }) => ({
 
   }));
 
-  const GitHub = styled(GitHubIcon)(({theme}) =>({
+  const Linked = styled(LinkedInIcon)(({theme}) =>({
     cursor: 'pointer',
 
     '&:hover':{
@@ -159,24 +159,24 @@ const Footer = () => {
         <ContentWrapper maxWidth="sm">
           
         <Wrapper>
-        <Avatar  sx={{ width: '4rem', height: '4rem' }} alt="Remy Sharp" src={Profile} />
+        <Avatar  sx={{ width: '4rem', height: '4rem' }} alt="Remy Sharp" src="/image/profile.png" />
           
         <Box>
-        <TextName variant='h5'> Abel Joshua</TextName>
-        <JobName variant='h6'> Software Engineer</JobName>
+        <TextName variant='h5'> Michael Joshua</TextName>
+        <JobName variant='h6'> UI/UX Designer</JobName>
         </Box>
         </Wrapper>
         
         <IconWrapper>
-               <Links href='https://github.com/iamabeljoshua' target='_blank'> <GitHub fontSize ='large' /></Links>
-               <Links href='https://twitter.com/iamabeljoshua' target='_blank'><Twitter fontSize ='large'/></Links> 
-               <Links href='https://api.whatsapp.com/send?phone=08157853814' target='_blank'><WhatsApp fontSize='large'/></Links>
+        <Links href='https://twitter.com/michael28992177' target='_blank'><Twitter fontSize ='large'/></Links> 
+               <Links href='https://api.whatsapp.com/send?phone=2347065514055' target='_blank'><WhatsApp fontSize='large'/></Links>
+               <Links href='https://www.linkedin.com/in/michael-63128a238/' target='_blank'> <Linked fontSize ='large' /></Links>
             </IconWrapper>
         </ContentWrapper>
     </FooterWrapper>
 
     <Gradient>
-    <JobName variant='h6'> © 2020</JobName>
+    <JobName variant='h6'> © Moonsat Technology 2020</JobName>
     </Gradient>
 
     </>
